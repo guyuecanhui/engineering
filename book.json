@@ -1,0 +1,29 @@
+{
+    "author" : "hucheng",
+    "generator": "site",
+    "title": "IRecU",
+    "language" : "zh-hans",
+    "plugins": [
+        "katex",
+        "include-codeblock",
+        "splitter",
+        "disqus",
+        "ace",
+        "-fontsettings",
+        "tbfed-pagefooter",
+        "sectionx"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "gitbookuse"
+        },
+        "fontsettings": {
+            "theme": "sepia",
+            "family": "serif",
+            "size": 3
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy <a href=mailto:hucheng9@huawei.com>胡诚</a> 2017-2018"
+        }
+    }   
+}

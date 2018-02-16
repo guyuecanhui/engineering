@@ -1,0 +1,513 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JVM Monitor · IRecU</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hucheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../notes/notes.html" />
+    
+    
+    <link rel="prev" href="system.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../laws/laws-in-cs.html">
+            
+                <a href="../laws/laws-in-cs.html">
+            
+                    
+                    Laws in CS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../laws/amdahls-law.html">
+            
+                <a href="../laws/amdahls-law.html">
+            
+                    
+                    Amdahl’s Law
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../algorithms/algorithms.html">
+            
+                <a href="../algorithms/algorithms.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../algorithms/dynamic-programming.html">
+            
+                <a href="../algorithms/dynamic-programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../algorithms/math.html">
+            
+                <a href="../algorithms/math.html">
+            
+                    
+                    Math Puzzles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../algorithms/anomaly-detection.html">
+            
+                <a href="../algorithms/anomaly-detection.html">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../data/data.html">
+            
+                <a href="../data/data.html">
+            
+                    
+                    Data Science
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../data/data-analysis.html">
+            
+                <a href="../data/data-analysis.html">
+            
+                    
+                    Data Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="software.html">
+            
+                <a href="software.html">
+            
+                    
+                    Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="language.html">
+            
+                <a href="language.html">
+            
+                    
+                    Language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="system.html">
+            
+                <a href="system.html">
+            
+                    
+                    System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="jvm-monitor.html">
+            
+                <a href="jvm-monitor.html">
+            
+                    
+                    JVM Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../notes/notes.html">
+            
+                <a href="../notes/notes.html">
+            
+                    
+                    Notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../notes/yzl.html">
+            
+                <a href="../notes/yzl.html">
+            
+                    
+                    云战略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >JVM Monitor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jvm&#x76D1;&#x63A7;&#x4E0E;&#x5206;&#x6790;&#x4EA7;&#x54C1;">JVM&#x76D1;&#x63A7;&#x4E0E;&#x5206;&#x6790;&#x4EA7;&#x54C1;</h1>
+<hr>
+<sec data-title="JClarity" data-id="jvm_0" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2 id="jclarity">JClarity<a class="pull-right section atTitle btn btn-default" target="jvm_0"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="jvm_0"><div class="panel-body">
+<h3 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h3>
+<h3 id="&#x5F00;&#x6E90;&#x4EE3;&#x7801;">&#x5F00;&#x6E90;&#x4EE3;&#x7801;</h3>
+<p><a href="https://github.com/jClarity?page=1" target="_blank">github - jclarity</a></p>
+</div></div></div></sec>
+<sec data-title="Plumbr" data-id="jvm_1" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2 id="plumbr">Plumbr<a class="pull-right section atTitle btn btn-default" target="jvm_1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="jvm_1"><div class="panel-body">
+<h2 id="&#x9898;&#x5916;&#x8BDD;">&#x9898;&#x5916;&#x8BDD;</h2>
+<ul>
+<li><p>&#x6027;&#x80FD;&#x8C03;&#x4F18;&#x662F;&#x4E86;&#x89E3;&#x4F60;&#x6709;&#x4EC0;&#x4E48;&#x8D44;&#x6E90;&#xFF0C;&#x54EA;&#x4E9B;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x9891;&#x7387;&#x8F83;&#x4F4E;&#x6216;&#x8FC7;&#x5EA6;&#x4F7F;&#x7528;&#x3002;&#x4E00;&#x65E6;&#x4F60;&#x4E86;&#x89E3;&#x4F60;&#x7684;&#x6838;&#x5FC3;&#x8D44;&#x6E90;(CPU&#xFF0C;&#x5185;&#x5B58;&#xFF0C;&#x78C1;&#x76D8;&#xFF0C;&#x7F51;&#x7EDC;&#xFF0C;JVM&#x7EBF;&#x7A0B;&#x7B49;)&#xFF0C;&#x4EE5;&#x53CA;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x5B9A;&#x65F6;&#x6D4B;&#x91CF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x627E;&#x51FA;&#x74F6;&#x9888;&#x5728;&#x54EA;&#xFF0C;&#x5982;&#x4F55;&#x51CF;&#x5C11;&#x8FD9;&#x79CD;&#x4F9D;&#x8D56;&#x3002;</p>
+</li>
+<li><p><a href="http://www.infoq.com/cn/news/2016/03/jclarity-releases-censum-30" target="_blank">&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x6D41;&#x7684;&#x7248;&#x672C;</a>&#xFF0C;&#x53EF;&#x4EE5;&#x76D1;&#x89C6;&#x591A;&#x4E2A;JVM&#x5B9E;&#x65F6;&#x63D0;&#x4F9B;&#x540C;&#x6837;&#x7684;&#x8BE6;&#x7EC6;&#x6307;&#x6807;&#x548C;&#x5206;&#x6790;&#xFF1B;&#x800C;&#x4E14;&#xFF0C;&#x5229;&#x7528;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x5BF9;&#x8981;&#x53D1;&#x751F;&#x7684;&#x5371;&#x9669;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x8B66;&#x62A5;&#xFF0C;&#x751A;&#x81F3;&#x9884;&#x6D4B;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x201C;&#x5728;&#x672A;&#x6765;2&#x5206;&#x949F;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x6709;95%&#x7684;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x9519;&#x8BEF;&#xFF08;OOME&#xFF09;&#x3002;&#x201D;&#x8FD9;&#x6837;&#x7684;&#x8B66;&#x62A5;&#x4FE1;&#x606F;&#x3002;</p>
+</li>
+<li><p>Censum&#x4E5F;&#x5C06;&#x4E0E;&#x6211;&#x4EEC;&#x7684;Illuminate&#x4EA7;&#x54C1;&#x96C6;&#x6210;&#x3002;&#x603B;&#x4E4B;&#xFF0C;Illuminate&#x5206;&#x6790;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5E76;&#x6307;&#x793A;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x7684;&#x95EE;&#x9898;&#x6700;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#xFF0C;&#x8FD9;&#x662F;&#x5185;&#x5B58;/ GC&#x76F8;&#x5173;&#x7684;&#x6216;&#x5176;&#x4ED6;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x4F8B;&#x5982;&#x78C1;&#x76D8;I / O&#xFF0C;&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;&#xFF0C;&#x7EBF;&#x7A0B;&#x9965;&#x997F;&#xFF0C;&#x7B49;&#x5F85;&#x5916;&#x90E8;&#x7CFB;&#x7EDF;&#x54CD;&#x5E94;&#xFF09;&#x3002;&#x5982;&#x679C;&#x95EE;&#x9898;&#x662F;&#x6709;&#x5173;GC&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x6DF1;&#x5165;&#x4E86;&#x89E3;Censum&#x7684;&#x529F;&#x80FD;&#x7279;&#x6027;&#xFF0C;&#x5E76;&#x83B7;&#x5F97;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x4E9B;&#x5EFA;&#x8BAE;&#x3002;</p>
+</li>
+</ul>
+</div></div></div></sec>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; <a href="mailto:hucheng9@huawei.com" target="_blank">&#x80E1;&#x8BDA;</a> 2017-2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2018-02-16 11:11:05
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="system.html" class="navigation navigation-prev " aria-label="Previous page: System">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../notes/notes.html" class="navigation navigation-next " aria-label="Next page: Notes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JVM Monitor","level":"1.5.3","depth":2,"next":{"title":"Notes","level":"1.6","depth":1,"path":"notes/notes.md","ref":"notes/notes.md","articles":[{"title":"云战略","level":"1.6.1","depth":2,"path":"notes/yzl.md","ref":"notes/yzl.md","articles":[]}]},"previous":{"title":"System","level":"1.5.2","depth":2,"path":"software/system.md","ref":"software/system.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","include-codeblock","splitter","disqus","ace","-fontsettings","tbfed-pagefooter","sectionx","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy <a href=mailto:hucheng9@huawei.com>胡诚</a> 2017-2018"},"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"ace":{},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"sepia","family":"serif","size":3},"sectionx":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hucheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IRecU","language":"zh-hans","gitbook":"*"},"file":{"path":"software/jvm-monitor.md","mtime":"2018-02-16T03:11:05.723Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-16T03:05:50.515Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
