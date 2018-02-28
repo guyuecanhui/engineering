@@ -3,7 +3,6 @@
 ---
 
 <!--sec data-title="随机数构造" data-id="math_0" data-show=true ces-->
-
 > 已知有个rand7()的函数，返回1到7随机自然数，让利用这个rand7()构造rand10() 随机1~10。
 
 ### Analyze
@@ -21,7 +20,6 @@ int rand10() {
   return (a71*7+a72)/4+1; 
 } 
 ```
-
 <!--endsec-->
 
 <!--sec data-title="随机选取关键字" data-id="math_1" data-show=true ces-->

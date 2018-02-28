@@ -1,0 +1,871 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shell Cookbook · IRecU</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hucheng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../configurations/configurations.html" />
+    
+    
+    <link rel="prev" href="codes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../laws/laws-in-cs.html">
+            
+                <a href="../laws/laws-in-cs.html">
+            
+                    
+                    Laws in CS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../laws/amdahls-law.html">
+            
+                <a href="../laws/amdahls-law.html">
+            
+                    
+                    Amdahl’s Law
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../architectures/architectures.html">
+            
+                <a href="../architectures/architectures.html">
+            
+                    
+                    Architectures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../architectures/cloud.html">
+            
+                <a href="../architectures/cloud.html">
+            
+                    
+                    Clound Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../architectures/lambda.html">
+            
+                <a href="../architectures/lambda.html">
+            
+                    
+                    Lambda Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../algorithms/algorithms.html">
+            
+                <a href="../algorithms/algorithms.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../algorithms/anomaly-detection.html">
+            
+                <a href="../algorithms/anomaly-detection.html">
+            
+                    
+                    Anomaly Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../algorithms/dynamic-programming.html">
+            
+                <a href="../algorithms/dynamic-programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../algorithms/math.html">
+            
+                <a href="../algorithms/math.html">
+            
+                    
+                    Math Puzzles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../algorithms/timeseries.html">
+            
+                <a href="../algorithms/timeseries.html">
+            
+                    
+                    Timeseries Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../data/data.html">
+            
+                <a href="../data/data.html">
+            
+                    
+                    Data Science
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../data/data-analysis.html">
+            
+                <a href="../data/data-analysis.html">
+            
+                    
+                    Data Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../machine-learning/machine-learning.html">
+            
+                <a href="../machine-learning/machine-learning.html">
+            
+                    
+                    Machine Learning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../machine-learning/basics.html">
+            
+                <a href="../machine-learning/basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../software/software.html">
+            
+                <a href="../software/software.html">
+            
+                    
+                    Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../software/databases.html">
+            
+                <a href="../software/databases.html">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../software/druid.html">
+            
+                <a href="../software/druid.html">
+            
+                    
+                    Druid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../software/jvm-monitor.html">
+            
+                <a href="../software/jvm-monitor.html">
+            
+                    
+                    JVM Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../software/kafka.html">
+            
+                <a href="../software/kafka.html">
+            
+                    
+                    Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../software/middleware.html">
+            
+                <a href="../software/middleware.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../software/storage.html">
+            
+                <a href="../software/storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../software/puppet.html">
+            
+                <a href="../software/puppet.html">
+            
+                    
+                    Puppet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../software/prometheus.html">
+            
+                <a href="../software/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../software/redis.html">
+            
+                <a href="../software/redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../software/simian.html">
+            
+                <a href="../software/simian.html">
+            
+                    
+                    Simian Army
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../software/open-source.html">
+            
+                <a href="../software/open-source.html">
+            
+                    
+                    Open Sources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="codes.html">
+            
+                <a href="codes.html">
+            
+                    
+                    Codes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.8.1" data-path="shell.html">
+            
+                <a href="shell.html">
+            
+                    
+                    Shell Cookbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../configurations/configurations.html">
+            
+                <a href="../configurations/configurations.html">
+            
+                    
+                    Configurations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../configurations/system.html">
+            
+                <a href="../configurations/system.html">
+            
+                    
+                    System Configure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../configurations/language.html">
+            
+                <a href="../configurations/language.html">
+            
+                    
+                    Language Configure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../notes/notes.html">
+            
+                <a href="../notes/notes.html">
+            
+                    
+                    Notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../notes/yzl.html">
+            
+                <a href="../notes/yzl.html">
+            
+                    
+                    云战略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Shell Cookbook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="shell-cookbook">Shell Cookbook</h1>
+<hr>
+<sec data-title="&#x7F16;&#x5199;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x542F;&#x505C;&#x811A;&#x672C;" data-id="shell_0" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x7F16;&#x5199;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x542F;&#x505C;&#x811A;&#x672C;">&#x7F16;&#x5199;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x542F;&#x505C;&#x811A;&#x672C;<a class="pull-right section atTitle btn btn-default" target="shell_0"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="shell_0"><div class="panel-body">
+<pre><code class="lang-bash"><span class="hljs-comment"># ./cmd start &#x542F;&#x52A8;&#x6240;&#x6709;redis&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> == <span class="hljs-string">&quot;start&quot;</span> ]; <span class="hljs-keyword">then</span>
+    nohup conf/redis-server conf/7000/redis.conf &gt; logs/out.log 2&gt;&amp;1 &amp;
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;redis instance 7000 started&quot;</span>
+    nohup conf/redis-server conf/7001/redis.conf &gt; logs/out.log 2&gt;&amp;1 &amp;
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;redis instance 7001 started&quot;</span>
+<span class="hljs-comment"># ./cmd status &#x67E5;&#x770B;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;redis&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">elif</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> == <span class="hljs-string">&quot;status&quot;</span> ]; <span class="hljs-keyword">then</span>
+    ps -ef|grep redis|grep -v <span class="hljs-string">&apos;grep&apos;</span>
+<span class="hljs-comment"># ./cmd stop &#x505C;&#x6B62;&#x6240;&#x6709;redis&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">elif</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> == <span class="hljs-string">&quot;stop&quot;</span> ]; <span class="hljs-keyword">then</span>
+    ps aux|grep redis|grep -v <span class="hljs-string">&apos;grep&apos;</span> | awk <span class="hljs-string">&apos;{print $2}&apos;</span> | xargs <span class="hljs-built_in">kill</span> -9
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;redis instances stopped&quot;</span>
+<span class="hljs-comment"># ./cmd cli &#x6253;&#x5F00;&#x672C;&#x5730;7000&#x7684;redis&#x5B9E;&#x4F8B;&#x5BA2;&#x6237;&#x7AEF;</span>
+<span class="hljs-keyword">elif</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> == <span class="hljs-string">&quot;cli&quot;</span> ]; <span class="hljs-keyword">then</span>
+    src/redis-cli -c -p 7000
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span> unrecognized parameter.&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+</div></div></div></sec>
+<sec data-title="&#x5E38;&#x7528;Linux&#x547D;&#x4EE4;" data-id="shell_1" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x5E38;&#x7528;linux&#x547D;&#x4EE4;">&#x5E38;&#x7528;Linux&#x547D;&#x4EE4;<a class="pull-right section atTitle btn btn-default" target="shell_1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="shell_1"><div class="panel-body">
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;&#x7269;&#x7406;CPU&#x4E2A;&#x6570;&#xFF1A;</span>
+cat /proc/cpuinfo| grep <span class="hljs-string">&quot;physical id&quot;</span>| sort| uniq| wc <span class="hljs-_">-l</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x7269;&#x7406;CPU&#x4E2D;core&#x7684;&#x4E2A;&#x6570;(&#x5373;&#x6838;&#x6570;)&#xFF1A;</span>
+cat /proc/cpuinfo| grep <span class="hljs-string">&quot;cpu cores&quot;</span>| uniq
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x903B;&#x8F91;CPU&#x7684;&#x4E2A;&#x6570;</span>
+cat /proc/cpuinfo| grep <span class="hljs-string">&quot;processor&quot;</span>| wc <span class="hljs-_">-l</span>
+
+<span class="hljs-comment"># &#x8BFB;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x548C;IP&#x5730;&#x5740;&#xFF1A;</span>
+Ipl=`/sbin/ifconfig eth1|grep <span class="hljs-string">&quot;inet addr:&quot;</span>|awk -F <span class="hljs-string">&quot;:&quot;</span> <span class="hljs-string">&apos;{print $2}&apos;</span>|awk <span class="hljs-string">&apos;{print $1}&apos;</span>`
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x76D1;&#x542C;&#x7684;TCP/UDP&#x7AEF;&#x53E3;&#xFF1A;</span>
+Tport=<span class="hljs-string">&quot;<span class="hljs-variable">${Tport}</span> `ss -tln|grep -v &quot;</span>127.0.0.1<span class="hljs-string">&quot;|awk &apos;{print <span class="hljs-variable">$3</span>}&apos;|awk -F &quot;</span>:<span class="hljs-string">&quot; &apos;{print <span class="hljs-variable">$NF</span>}&apos;|sort -u|grep ^[0-9]`&quot;</span>
+Uport=<span class="hljs-string">&quot;<span class="hljs-variable">${Uport}</span> `ss -uan|grep -v &quot;</span>127.0.0.1<span class="hljs-string">&quot;|awk &apos;{print <span class="hljs-variable">$4</span>}&apos;|awk -F &quot;</span>:<span class="hljs-string">&quot; &apos;{print <span class="hljs-variable">$NF</span>}&apos;|sort -u|grep ^[0-9]`&quot;</span>
+
+<span class="hljs-comment"># &#x628A;&#x5360;&#x7528;526&#x53F7;&#x7AEF;&#x53E3;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x5173;&#x6389;&#xFF1A;</span>
+<span class="hljs-built_in">kill</span> -9 `lsof -i:526 | grep IPv4 | awk <span class="hljs-string">&apos;{print $2}&apos;</span>`
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#xFF1A;</span>
+date <span class="hljs-_">-s</span> <span class="hljs-string">&quot;2016-10-18 16:30:00&quot;</span>
+
+<span class="hljs-comment"># &#x5C06;&#x6587;&#x4EF6;&#x5939;`diagnose`&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x964D;&#x4E3A;`user:group`&#xFF1A;</span>
+chown -R user:group diagnose
+
+<span class="hljs-comment"># &#x67E5;&#x627E;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x6587;&#x4EF6;&#x540D;&#x5305;&#x542B;`hc`&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF1A;</span>
+find . -name <span class="hljs-string">&apos;*hc*&apos;</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x6240;&#x6709;&#x5B50;&#x6587;&#x4EF6;&#x5360;&#x7528;&#x78C1;&#x76D8;&#x5927;&#x5C0F;&#xFF1A;</span>
+du -ah --max-depth=1
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x91CF;&#x548C;&#x5360;&#x7528;&#x7387;&#xFF1A;</span>
+df -m
+
+<span class="hljs-comment"># &#x67E5;&#x770B;Linux&#x7248;&#x672C;&#xFF1A;</span>
+more /etc/issue
+
+<span class="hljs-comment"># &#x67E5;&#x770B;Linux&#x5185;&#x6838;&#x7248;&#x672C;&#xFF1A;</span>
+uname <span class="hljs-_">-a</span>
+
+<span class="hljs-comment"># &#x5B89;&#x88C5;python 3&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x6210;hc&#x7528;&#x6237;&#x4E0B;&#x7684;&#x9ED8;&#x8BA4;python</span>
+<span class="hljs-comment"># 1. download and install python 3.x.x</span>
+tar -zxvf Python-3.x.x.tgz
+<span class="hljs-built_in">cd</span> Python-3.x.x
+./configure
+make
+make install
+<span class="hljs-comment"># 2. create user hc</span>
+useradd -u 544 <span class="hljs-_">-d</span> /home/hc -g users -m hc
+<span class="hljs-comment"># 3. add user profile</span>
+su - hc
+vi .bash_profile
+<span class="hljs-comment"># 4. add &quot;export PATH=$HOME/bin:/opt/python/Python-3.6.1:usr/local/bin:$PATH&quot; to the end of bash_profile</span>
+<span class="hljs-built_in">source</span> bash_profile
+
+<span class="hljs-comment"># &#x7EC8;&#x6B62;&#x67D0;&#x4E2A;&#x540D;&#x79F0;&#x7684;&#x8FDB;&#x7A0B;&#xFF1A;</span>
+ps aux|grep [j]ava | awk <span class="hljs-string">&apos;{print $2}&apos;</span> | xargs <span class="hljs-built_in">kill</span> -9
+
+<span class="hljs-comment"># &#x538B;&#x7F29;/&#x89E3;&#x538B;&#x6587;&#x4EF6;/&#x6587;&#x4EF6;&#x5939;&#xFF1A;</span>
+tar -cvf target.tar <span class="hljs-built_in">source</span>Files
+
+<span class="hljs-comment"># &#x641C;&#x7D22;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;`text`&#x7684;&#x6587;&#x4EF6;&#x53CA;&#x5176;&#x5185;&#x5BB9;&#xFF1A;</span>
+grep -R <span class="hljs-string">&quot;text&quot;</span>
+
+<span class="hljs-comment"># &#x8FDC;&#x7A0B;&#x62F7;&#x8D1D;&#x6587;&#x4EF6;&#x5939;&#x5230;&#x672C;&#x5730;&#x76EE;&#x5F55;&#xFF1A;</span>
+scp -r root@10.6.159.147:/opt/soft/<span class="hljs-built_in">test</span> /opt/soft/
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x7528;&#x6237;&#xFF1A;</span>
+useradd <span class="hljs-_">-d</span> /srv/druid druid
+
+<span class="hljs-comment"># Vim&#x5B57;&#x7B26;&#x4E32;&#x5168;&#x90E8;&#x66FF;&#x6362;&#xFF1A;</span>
+:%s/original/replaced/g
+
+<span class="hljs-comment"># Python&#x5C06;print&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x7981;&#x7528;&#x7F13;&#x5B58;</span>
+python -u ingest-delay.py ddsLongSql 392400 &gt; ingest-delay.log &amp;
+
+<span class="hljs-comment"># &#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x83B7;&#x53D6;&#x5339;&#x914D;&#x6B63;&#x5219;&#x7684;&#x5B50;&#x4E32;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;jdbc_url=jdbc:oracle:thin:@10.137.33.169:1536:ora11g&quot;</span>|grep -Eo <span class="hljs-string">&quot;([0-9]+\.){3}[0-9]+\:[0-9]+&quot;</span>
+</code></pre>
+</div></div></div></sec> 
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; <a href="mailto:hucheng9@huawei.com" target="_blank">&#x80E1;&#x8BDA;</a> 2017-2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2018-02-17 20:31:56
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="codes.html" class="navigation navigation-prev " aria-label="Previous page: Codes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../configurations/configurations.html" class="navigation navigation-next " aria-label="Next page: Configurations">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Shell Cookbook","level":"1.8.1","depth":2,"next":{"title":"Configurations","level":"1.9","depth":1,"path":"configurations/configurations.md","ref":"configurations/configurations.md","articles":[{"title":"System Configure","level":"1.9.1","depth":2,"path":"configurations/system.md","ref":"configurations/system.md","articles":[]},{"title":"Language Configure","level":"1.9.2","depth":2,"path":"configurations/language.md","ref":"configurations/language.md","articles":[]}]},"previous":{"title":"Codes","level":"1.8","depth":1,"path":"codes/codes.md","ref":"codes/codes.md","articles":[{"title":"Shell Cookbook","level":"1.8.1","depth":2,"path":"codes/shell.md","ref":"codes/shell.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex","include-codeblock","splitter","disqus","ace","-fontsettings","tbfed-pagefooter","sectionx","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy <a href=mailto:hucheng9@huawei.com>胡诚</a> 2017-2018"},"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"ace":{},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"sepia","family":"serif","size":3},"sectionx":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hucheng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IRecU","language":"zh-hans","gitbook":"*"},"file":{"path":"codes/shell.md","mtime":"2018-02-17T12:31:56.791Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-19T07:38:26.129Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
